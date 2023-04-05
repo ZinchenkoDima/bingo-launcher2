@@ -1,0 +1,116 @@
+@keyframes flash {
+  from {
+    opacity: 0.5; }
+  to {
+    opacity: 1; } }
+
+body {
+  background-color: #333;
+  color: #fff; }
+
+.bigNumberDisplay {
+  font-size: 160px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 50px; }
+  .bigNumberDisplay span.counter {
+    display: block;
+    font-size: 50px; }
+
+p.bingoValues {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  color: white; }
+
+.buttonsWrapper {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 150px;
+  text-align: center; }
+  .buttonsWrapper .button {
+    display: inline-block;
+    margin: 5px 0; }
+    .buttonsWrapper .button input {
+      border: 0;
+      background-color: #FFF;
+      color: #333;
+      width: 150px;
+      height: 65px;
+      line-height: 65px;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px; }
+      .buttonsWrapper .button input:hover {
+        background-color: #DDD;
+        cursor: pointer; }
+      .buttonsWrapper .button input.playing {
+        background-color: red;
+        color: white;
+        border-color: red; }
+      .buttonsWrapper .button input.turbo {
+        color: white;
+        border: 2px solid white;
+        background-color: transparent; }
+        .buttonsWrapper .button input.turbo:hover, .buttonsWrapper .button input.turbo.on {
+          border-color: green;
+          background-color: green;
+          color: white; }
+      .buttonsWrapper .button input:disabled {
+        filter: alpha(opacity=30);
+        -moz-opacity: 0.3;
+        -khtml-opacity: 0.3;
+        opacity: 0.3;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$ieop)";
+        pointer-events: none; }
+        .buttonsWrapper .button input:disabled:hover {
+          cursor: not-allowed; }
+    .buttonsWrapper .button input#btnNewGame {
+      height: 40px;
+      line-height: 40px; }
+
+.numbers-wrapper {
+  max-width: 502px;
+  margin: 0 auto;
+  padding-left: 100px; }
+  .numbers-wrapper .numbers-board {
+    max-width: 500px;
+    font-size: 0;
+    border: 1px solid #FFF; }
+    .numbers-wrapper .numbers-board span {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border: 1px solid #FFF;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      font-family: Arial; }
+      .numbers-wrapper .numbers-board span.selected {
+        color: #FFF;
+        background-color: #616161; }
+      .numbers-wrapper .numbers-board span.last-out {
+        color: #333 !important;
+        background-color: #fff; }
+      .numbers-wrapper .numbers-board span.newnumber {
+        color: black;
+        background-color: lightblue;
+        animation-name: flash;
+        animation-duration: 0.1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: running; }
+      .numbers-wrapper .numbers-board span.bingook {
+        color: white !important;
+        background-color: green !important; }
+      .numbers-wrapper .numbers-board span.lineok {
+        color: black !important;
+        background-color: yellow !important; }
